@@ -1,0 +1,31 @@
+created:
+    - app/Http/Controllers/ProductController.php
+    - database/factories/ProductFactory.php
+    - database/migrations/2021_01_28_164308_create_products_table.php
+    - app/Models/Product.php
+    - database/seeders/ProductSeeder.php
+    - tests/Feature/Http/Controllers/ProductControllerTest.php
+    - app/Http/Requests/ProductStoreRequest.php
+    - app/Http/Requests/ProductUpdateRequest.php
+    - resources/views/product/index.blade.php
+    - resources/views/product/create.blade.php
+    - resources/views/product/show.blade.php
+    - resources/views/product/edit.blade.php
+updated:
+    - routes/web.php
+models:
+    Models\Brand: { marca: string }
+    Models\Category: { categoria: string }
+    Models\Channel: { canal: string }
+    Models\Chief: { jefes: string }
+    Models\Client: { cliente: string }
+    Models\Line: { linea: string, category_id: 'biginteger unsigned' }
+    Models\Maker: { fabricante: string }
+    Models\Month: { mes: string }
+    Models\Parameterization: { client_id: 'biginteger unsigned', region_id: 'biginteger unsigned', channel_id: 'biginteger unsigned', seller_id: 'biginteger unsigned', observaciones: text }
+    Models\Presentation: { presentacion: string }
+    Models\Region: { region: string }
+    Models\Seller: { vendedores: string, chief_id: 'biginteger unsigned default:1' }
+    Models\User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Models\Year: { anio: string }
+    Product: { year_id: 'id foreign:years.id', month_id: 'id foreign:months.id', client_id: 'id foreign:clients.id', line_id: 'id foreign:lines.id', marker_id: 'id foreign:markers.id', brand_id: 'id foreign:brands.id', presentation_id: 'id foreign:presentations.id', precio_iva: 'id foreign:precio_iva.id', observaciones: text, user_id: 'id foreign' }

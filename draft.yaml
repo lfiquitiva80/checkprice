@@ -1,0 +1,19 @@
+models:
+  Product:
+    year_id: id foreign:years.id
+    month_id: id foreign:months.id
+    client_id: id foreign:clients.id
+    line_id: id foreign:lines.id
+    marker_id: id foreign:markers.id
+    brand_id: id foreign:brands.id
+    presentation_id: id foreign:presentations.id
+    precio_iva: id foreign:precio_iva.id
+    observaciones: text
+    user_id: id foreign
+    
+
+controllers:
+  Product:
+    resource
+
+seeders: Product
